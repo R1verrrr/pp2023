@@ -39,13 +39,13 @@ def add_to_system():
         #element["Mark: "] = input("Please enter the mark: ")
         system.append(new_element)
 
+def enter_mark():
+    return
 
-
-if "__name__" == "main":
-    student_iput()
-    print(students_list)
-    course_input()
-    print(courses_list)
-    add_to_system()
-    print(system)
+student_iput()
+print(students_list)
+course_input()
+print(courses_list)
+add_to_system()
+print(system)
 
