@@ -1,4 +1,4 @@
-from random import randint
+import numpy
 
 print("Hello !")
 
@@ -29,23 +29,37 @@ def course_input():
 def add_to_system():
 
     for i in range(0, number_of_students):
-        choice = int(input("Choose a course by index for student " + str(i+1)) + ": ")
+        choice = int(input("Choose a course by index for student " + str(i+1) + ": "))
         new_element = {}
         new_element["Name of student: "] = students_list[i][0]
         new_element["Student ID: "] = students_list[i][1]
         new_element["DoB: "] = students_list[i][2]
         new_element["Course participating in: "]  = courses_list[choice][0]
         new_element["Course ID: "] = courses_list[choice][1]
-        #element["Mark: "] = input("Please enter the mark: ")
+        new_element["Mark: "] = ""
         system.append(new_element)
 
 def enter_mark():
-    return
+
+    while True:
+        index = input("Choose a student by his/her index that you want to enter mark: ")
+        if int(index) >= number_of_students or int(index) < 0:
+            print("Invalid index!")
+
+        else: 
+            index = int(index)
+            mark = input("Pls enter the mark: ")
+            system[index]["Mark: "] = mark
+
+def disply_all():
+    for i in range(0, number_of_students):
+        print("Name: " + str(system[i][0]))
 
 student_iput()
 print(students_list)
 course_input()
 print(courses_list)
 add_to_system()
-print(system)
+enter_mark()
+disply_all()
 
