@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: Dao Duy Manh Ha (Le Rêveur)
+* Student Name: Dao Duy Manh Ha
 * Student ID: BI12-141
 
